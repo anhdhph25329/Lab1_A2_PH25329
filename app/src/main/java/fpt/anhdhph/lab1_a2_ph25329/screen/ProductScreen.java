@@ -12,7 +12,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 import fpt.anhdhph.lab1_a2_ph25329.R;
+import fpt.anhdhph.lab1_a2_ph25329.adapter.ProductAdapter;
+import fpt.anhdhph.lab1_a2_ph25329.dao.ProductDAO;
+import fpt.anhdhph.lab1_a2_ph25329.model.Product;
 
 public class ProductScreen extends AppCompatActivity {
 
@@ -21,6 +26,10 @@ public class ProductScreen extends AppCompatActivity {
     Button btnAdd, btnUpdate, btnDelete;
     ListView lvProduct;
 
+    ProductDAO productDAO;
+    ArrayList<Product> list;
+    ProductAdapter adapter;
+    Product currentProduct = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +42,13 @@ public class ProductScreen extends AppCompatActivity {
         });
 
         anhXa();
+
+        productDAO = new ProductDAO(this);
+
+        list = productDAO.getList();
+
+        adapter = new ProductAdapter(this, list);
+        lvProduct.setAdapter(adapter);
 
     }
 

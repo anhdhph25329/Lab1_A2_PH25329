@@ -53,7 +53,7 @@ public class ProductAdapter extends BaseAdapter {
         tvId.setText(product.getId()+"");
         tvName.setText(product.getName());
         tvPrice.setText(product.getPrice()+"");
-        tvCate.setText(product.getId_cat());
+        tvCate.setText(product.getId_cat()+"");
 
         return row;
     }
