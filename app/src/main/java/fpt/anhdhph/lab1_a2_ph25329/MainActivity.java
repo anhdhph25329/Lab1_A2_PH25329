@@ -1,5 +1,6 @@
 package fpt.anhdhph.lab1_a2_ph25329;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,17 +16,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 import fpt.anhdhph.lab1_a2_ph25329.adapter.CateAdapter;
 import fpt.anhdhph.lab1_a2_ph25329.dao.CateDAO;
 import fpt.anhdhph.lab1_a2_ph25329.model.Category;
+import fpt.anhdhph.lab1_a2_ph25329.screen.ProductScreen;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText edtCategoryName;
     Button btnAdd, btnUpdate, btnDelete;
     ListView lvCategory;
+    FloatingActionButton btnProductSreen;
 
     CateDAO cateDAO;
     ArrayList<Category> list;
@@ -59,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
         deleteRow();
 
+        btnProductSreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProductScreen.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void anhXa(){
@@ -67,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
         lvCategory = findViewById(R.id.lvCategory);
+        btnProductSreen = findViewById(R.id.btnProductScreen);
     }
 
     public void addRow(){
