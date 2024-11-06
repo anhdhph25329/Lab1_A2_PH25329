@@ -79,8 +79,8 @@ public class ProductScreen extends AppCompatActivity {
                 double price = Double.parseDouble(edtPrice.getText().toString());
                 int id_cat = Integer.parseInt(edtIdCate.getText().toString());
 
-                if (name.length() < 3) {
-                    Toast.makeText(ProductScreen.this, "Tên sản phẩm phải có ít nhất 3 ký tự", Toast.LENGTH_SHORT).show();
+                if (name.length() < 5) {
+                    Toast.makeText(ProductScreen.this, "Tên sản phẩm phải có ít nhất 5 ký tự", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -127,8 +127,8 @@ public class ProductScreen extends AppCompatActivity {
                 double price = Double.parseDouble(edtPrice.getText().toString());
                 int id_cat = Integer.parseInt(edtIdCate.getText().toString());
 
-                if(name.length() < 3){
-                    Toast.makeText(ProductScreen.this, "Tên sản phẩm phải có ít nhất 3 ký tự", Toast.LENGTH_SHORT).show();
+                if(name.length() < 5){
+                    Toast.makeText(ProductScreen.this, "Tên sản phẩm phải có ít nhất 5 ký tự", Toast.LENGTH_SHORT).show();
                     return;
                 }else {
                     currentProduct.setName(name);
