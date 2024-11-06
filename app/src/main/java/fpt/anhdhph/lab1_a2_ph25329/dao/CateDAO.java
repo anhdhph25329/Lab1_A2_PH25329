@@ -59,6 +59,7 @@ public class CateDAO {
                 //thứ tự cột: id là 0, name là 1
                 int id = cursor.getInt(0);
                 String name = cursor.getString(1);
+
                 Category category = new Category();
                 category.setId(id);
                 category.setName(name);

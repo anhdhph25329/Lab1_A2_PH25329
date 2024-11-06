@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                     list.clear(); // xóa hết
                     list.addAll(cateDAO.getList());
                     adapter.notifyDataSetChanged();
-                    String cateName = edtCategoryName.getText().toString();
                     edtCategoryName.setText("");
                     Toast.makeText(MainActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
                 }else {

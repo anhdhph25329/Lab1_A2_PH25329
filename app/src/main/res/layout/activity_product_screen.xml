@@ -19,17 +19,18 @@
     <EditText
         android:id="@+id/edtProductName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Nhập tên sản phẩm"/>
     <EditText
         android:id="@+id/edtPrice"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Nhập giá sản phẩm"/>
-    <Spinner
-        android:id="@+id/spCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edtIdCate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nhập id thể loại"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -43,17 +44,19 @@ public class ProductAdapter extends BaseAdapter {
             row = view;
         }else {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.layout_row_list_cate, null);
+            row = inflater.inflate(R.layout.layout_row_list_product, null);
         }
         Product product = list.get(i);
         TextView tvId = row.findViewById(R.id.tvId);
         TextView tvName = row.findViewById(R.id.tvName);
         TextView tvPrice = row.findViewById(R.id.tvPrice);
         TextView tvCate = row.findViewById(R.id.tvCategory);
+
         tvId.setText(product.getId()+"");
         tvName.setText(product.getName());
         tvPrice.setText(product.getPrice()+"");
         tvCate.setText(product.getId_cat()+"");
+
 
         return row;
     }

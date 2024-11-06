@@ -48,6 +48,7 @@ public class CateAdapter extends BaseAdapter {
         Category cate = list.get(i);
         TextView tvId = row.findViewById(R.id.tvId);
         TextView tvName = row.findViewById(R.id.tvName);
+
         tvId.setText(cate.getId()+"");
         tvName.setText(cate.getName());
 
